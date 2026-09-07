@@ -1,0 +1,18 @@
+header{
+    width: 100vw;
+    background-color: aquamarine;
+}
+nav, ul{
+    display: flex;
+    list-style: none;
+}
+
+nav, ul, li{
+    padding-right: 5px; 
+    text-decoration: none;
+    font-family: "Georgia";
+}
+
+li{
+    font-family: "Georgia";
+}
