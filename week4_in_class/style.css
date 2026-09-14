@@ -1,0 +1,49 @@
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.toggle{
+    width: 100px; 
+    height: 100px;
+    position: relative;
+    background-color: #14ff95;
+}
+.animation{
+    /* animation: example 3s linear 0s 5 reverse ; */
+    animation-name: circular-move;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes example {
+    0%  {top: 0px; left: 0px;} 
+    100% {top: 100px; left: 100px;}
+}
+
+@keyframes circular-move {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px; 
+          transform: rotate(90deg);}
+    50%  {background-color:blue; left:200px; top:200px; 
+          transform: rotate(180deg);}
+    75%  {background-color:green; left:0px; top:200px; 
+          transform: rotate(270deg);}
+    100% {background-color:red; left:0px; top:0px; 
+          transform: rotate(360deg);}
+}
+
+.transition{
+    width: 100px; 
+    height: 100px;
+    background-color: deeppink;
+    opacity: 1;
+    transition: 2s;
+}
+
+.transition:hover{
+    opacity: 0;
+    transform: rotate(360deg);
+    /* transform: matrix(1, 3, 0, 0, 1, 3);  */
+}
