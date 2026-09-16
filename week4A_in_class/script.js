@@ -12,16 +12,15 @@ button.addEventListener('click', function(){
 });
 
 const numberButton = document.getElementById('insert-number'); 
-
 const max = 10;
+//create a paragraph element 
+const numberP = document.createElement('p'); 
+//add paragraph element to the document 
+document.body.appendChild(numberP);
 
 numberButton.addEventListener('click', function(){
     let randomNumber = Math.floor(Math.random()*max); 
-    let textNumber = document.createTextNode(randomNumber); 
-    const numberP = document.createElement('p'); 
-
-    numberP.appendChild(textNumber); 
-    
+    numberP.textContent = randomNumber;
 }); 
 
 
