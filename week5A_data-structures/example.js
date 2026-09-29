@@ -5,38 +5,39 @@ const habitsJson = `[
   { "habit": "Read", "category": "Learning", "streakDays": 8, "completedToday": false }
 ]`;
 
+//Parse the JSON and log a list of just the habit names.
+
 const habits = JSON.parse(habitsJson); 
+// console.log(habits); 
 
-console.log(habitNames); 
-console.log(habitNames[0].habit); //logs the first habit 
+// console.log(habits[0].habit); 
 
-//only log habits that have been completed today 
-const completedToday = habitNames.filter(entry => entry.completedToday === true); 
-console.log(completedToday); 
+habits.forEach(entry => {
+    console.log(entry.habit); 
+}); 
 
-//sum of total streak days 
-const totalStreaks = habitNames.reduce((sum, entry) => sum + entry.streakDays, 0); 
-console.log(`Total Streak days: ${totalStreaks} days`); 
+//habits completed today 
+const habitsToday = habits.filter(entry => entry.completedToday === true);
+console.log(habitsToday); 
 
-//find habit with longest streak w/ sort 
-const longestStreak = habitNames.sort((a , b) => b.streakDays - a.streakDays); 
-console.log(longestStreak[0]);
+//combined streak length
+const combineStreak = habits.reduce((sum, entry) => sum + entry.streakDays, 0);
+console.log(combineStreak); 
 
 //compare each habit to the one previous 
-const longest = habitNames.reduce((max, current) => {
+const longest = habits.reduce((max, current) => {
     return current.streakDays > max.streakDays ? current : max; 
-}, habitNames[0]); 
+}, habits[0]); 
 
 console.log(longest.habit); 
 
-// more simplified javascript 
+// //// more simplified javascript 
+// let longest = habits[0]; 
 
-// let longest = habitNames[0]; 
-
-// for (const currentHabit of habitNames){
+// for (const currentHabit of habits){
 //     if(currentHabit.streakDays > longest.streakDays){
 //         longest = currentHabit; 
 //     }
 // }
 
-console.log(longest.habit); 
+// console.log(longest); 
