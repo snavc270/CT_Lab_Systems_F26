@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: system-ui, sans-serif;
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}

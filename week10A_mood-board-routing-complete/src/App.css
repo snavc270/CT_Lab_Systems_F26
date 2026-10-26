@@ -1,0 +1,64 @@
+nav {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #ddd;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tags button {
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 999px;
+  padding: 4px 12px;
+}
+
+.tags button.active {
+  background: black;
+  color: white;
+  border-color: black;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.detail img {
+  display: block;
+  max-width: 100%;
+  max-height: 60vh;
+  margin: 16px 0;
+}
+
+/* STRETCH: NavLink adds class="active" to the current page's link */
+nav a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}

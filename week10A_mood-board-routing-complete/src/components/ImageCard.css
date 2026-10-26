@@ -1,0 +1,40 @@
+.card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.card p {
+  margin: 8px 0 4px;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.card-tags button {
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 13px;
+  color: #666;
+}
+
+/* OPTIONAL: drag feedback */
+.card[draggable="true"] {
+  cursor: grab;
+}
+
+.card.dragging {
+  opacity: 0.4;
+}
+
+.card.over {
+  outline: 2px dashed currentColor;
+  outline-offset: 4px;
+}
