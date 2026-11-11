@@ -13,7 +13,7 @@ const startingImages = [
   { id: 3, src: "/images/photo3.jpg", title: "Tomorrow", tags: ["summer", "city"] },
   { id: 4, src: "/images/photo4.jpg", title: "First snow", tags: ["winter", "family"] },
   { id: 5, src: "/images/photo5.jpg", title: "Ocean walk", tags: ["summer", "nature"] },
-  { id: 6, src: "/images/photo6.jpg", title: "Grandma's kitchen", tags: ["family"] },
+  { id: 6, src: "/images/photo6.jpg", title: "Kitchen", tags: ["family"] },
 ];
 
 function App() {
